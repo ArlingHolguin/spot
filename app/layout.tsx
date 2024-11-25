@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import ClientConfigProvider from "./ClientConfigProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,11 +25,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-slate-100 ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <nav className="w-full px-5 bg-[#ffffffe5]  shadow drop-shadow-md text-[14px] fixed top-0 z-50">
+        <div className='w-full max-w-5xl mx-auto h-[80px] flex justify-between items-center'>
+          <div className='flex items-center'>
+            <a href="/"  className='text-3xl font-black text-[#5a1482]'  >Spotly</a>
+          </div>
+          <div className='flex items-center'>
+            <a href='/auth/login' className='mx-4'>Login</a>
+            <a href='/auth/register' className='mx-4'>Register</a>
+          </div>
+        </div>
+        </nav>
+        <ClientConfigProvider>
+          {children}
+        </ClientConfigProvider>
       </body>
     </html>
   );
