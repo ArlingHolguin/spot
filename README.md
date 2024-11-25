@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Spot - Frontend en Next.js
 
-First, run the development server:
+Este proyecto es el frontend para Spot, desarrollado con **Next.js**, utilizando **TailwindCSS** y **Ant Design** como frameworks principales.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Despliegue en Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Sigue los pasos a continuación para desplegar este proyecto en Vercel:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/ArlingHolguin/spot.git
+   cd spot
+   ```
 
-## Learn More
+2. **Sube el repositorio a GitHub** (si aún no lo has hecho).
 
-To learn more about Next.js, take a look at the following resources:
+3. **Crea un proyecto en Vercel**:
+   - Accede a [https://vercel.com/](https://vercel.com/).
+   - Haz clic en **New Project**.
+   - Importa el repositorio desde GitHub.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Configura las variables de entorno**:
+   En el panel de configuración del proyecto en Vercel, agrega las siguientes variables de entorno:
+   ```
+   NEXT_PUBLIC_NODE_PROD=integration
+   NEXT_PUBLIC_DEV_URL=http://spotly.test
+   NEXT_PUBLIC_PROD_URL=https://whatfy.com
+   NEXT_PUBLIC_DEV_AUTH_URL=http://spotly.test
+   NEXT_PUBLIC_PROD_AUTH_URL=https://whatfy.com
+   NEXT_PUBLIC_CLIENT_ID=9d4cfd52-3057-43be-8214-b01aed7b6b56
+   NEXT_PUBLIC_CLIENT_SECRET=7DTSK0UZVE2TMCtnBPsD3qubvXJMLh9Ou5bT1zgz
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. **Despliega el proyecto**:
+   - Vercel detectará automáticamente el framework **Next.js** y configurará el entorno.
+   - Una vez desplegado, obtendrás una URL de producción como `https://spot.vercel.app`.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Despliegue en Local
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Sigue estos pasos para ejecutar el proyecto localmente:
+
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/ArlingHolguin/spot.git
+   cd spot
+   ```
+
+2. **Instala las dependencias**:
+   Asegúrate de tener **Node.js** y **npm** instalados. Luego, ejecuta:
+   ```bash
+   npm install
+   ```
+
+3. **Configura las variables de entorno**:
+   Crea un archivo `.env.local` en la raíz del proyecto y copia el contenido de `.env.example`. Configura las variables de entorno según tu entorno local:
+   ```
+   NEXT_PUBLIC_NODE_PROD=integration
+   NEXT_PUBLIC_DEV_URL=http://spotly.test
+   NEXT_PUBLIC_PROD_URL=https://whatfy.com
+   NEXT_PUBLIC_DEV_AUTH_URL=http://spotly.test
+   NEXT_PUBLIC_PROD_AUTH_URL=https://whatfy.com
+   NEXT_PUBLIC_CLIENT_ID=9d4cfd52-3057-43be-8214-b01aed7b6b56
+   NEXT_PUBLIC_CLIENT_SECRET=7DTSK0UZVE2TMCtnBPsD3qubvXJMLh9Ou5bT1zgz
+   ```
+
+4. **Ejecuta el servidor de desarrollo**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Accede a la aplicación**:
+   Abre tu navegador y ve a [http://localhost:3000](http://localhost:3000).
+
+---
+
+## Scripts Disponibles
+
+- `npm run dev`: Inicia el servidor de desarrollo.
+- `npm run build`: Compila la aplicación para producción.
+- `npm start`: Inicia el servidor de producción (necesita un `npm run build` previo).
+- `npm run lint`: Ejecuta el linter para revisar errores en el código.
+
+---
+
+## Tecnologías Utilizadas
+
+- **Next.js**: Framework para aplicaciones React.
+- **TailwindCSS**: Framework de diseño para estilos rápidos y responsivos.
+- **Ant Design**: Biblioteca de componentes UI.
+- **Axios**: Cliente HTTP para consumo de APIs.
+
+---
+
+## Repositorio
+
+El código fuente está disponible en GitHub: [https://github.com/ArlingHolguin/spot.git](https://github.com/ArlingHolguin/spot.git)
+
+---
+
+Si tienes preguntas o problemas, ¡no dudes en contactarme! 🚀
