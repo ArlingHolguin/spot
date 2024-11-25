@@ -1,5 +1,4 @@
 import ShortenerInput from "./components/ShortenerInput";
-import { Test } from "./components/Test";
 
 export default function Home() {
   return (

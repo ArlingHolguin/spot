@@ -32,11 +32,10 @@ export default function RootLayout({
         <nav className="w-full px-5 bg-[#ffffffe5]  shadow drop-shadow-md text-[14px] fixed top-0 z-50">
         <div className='w-full max-w-5xl mx-auto h-[80px] flex justify-between items-center'>
           <div className='flex items-center'>
-            <a href="/"  className='text-3xl font-black text-[#5a1482]'  >Spotly</a>
+            <div className='text-3xl font-black text-[#5a1482]'  >Spotly</div>
           </div>
           <div className='flex items-center'>
-            <a href='/auth/login' className='mx-4'>Login</a>
-            <a href='/auth/register' className='mx-4'>Register</a>
+            <span className='mx-4'>Login</span>
           </div>
         </div>
         </nav>

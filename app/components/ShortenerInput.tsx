@@ -3,7 +3,7 @@ import React, { forwardRef, ForwardedRef, useEffect } from 'react';
 import { Button, Form, Input, message, Space, Table } from 'antd';
 import Service from '../services';
 import { useHookLocalStorage } from '../helpers/useHookLocalStorage';
-import { CopyOutlined, DeleteOutlined, EnterOutlined, LinkOutlined, UserOutlined } from '@ant-design/icons';
+import { CopyOutlined, DeleteOutlined, EnterOutlined, LinkOutlined } from '@ant-design/icons';
 
 
 // Componente con soporte para `ref`
